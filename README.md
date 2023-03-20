@@ -16,9 +16,8 @@ Predicting whether a customer would be interested in buying Vehicle Insurance so
     * [Data Visualization](#data-visualization)
     * [Feature Engineering and Data Pre processing](#feature-engineering-and-data-pre-processing)
     * [Machine Learning Models](Machine-Learning-Models)
-    * [Metrics Evaluation](#metrics-evaluation)
   * [Conclusion](#conclusion)
-  * [Reference](#reference)
+  
 
 ---
 
@@ -93,4 +92,33 @@ After performing one-hot encoding to convert categorical variables to numerical 
 Given the imbalanced nature of the data, the Synthetic Minority Over-sampling Technique (SMOTE) was used to balance the dataset by generating synthetic samples for the minority class.
 
 Finally, the data was split into training and testing sets to build and evaluate the predictive models.
+
+### Machine Learning Models
+For modeling, we tried the various classification algorithms like:
+
+#### Logistic Regression
+Logistic regression is named for the function used at the core of the method, the logistic function.
+
+The logistic function, also called the sigmoid function, was developed by statisticians to describe properties of population growth in ecology, rising quickly and maxing out at the carrying capacity of the environment. It’s an S-shaped curve that can take any real-valued number and map it into a value between 0 and 1, but never exactly at those limits.
+
+#### Decision Tree 
+Decision Trees are non-parametric supervised learning methods, capable of finding complex non-linear relationships in the data. Decision trees are a type of algorithm that uses a tree-like system of conditional control statements to create the machine learning model. A decision tree observes features of an object and trains a model in the structure of a tree to predict data in the future to produce output.
+For classification trees, it is a tree-structured classifier, where internal nodes represent the features of a dataset, branches represent the decision rules and each leaf node represents the outcome.
+
+#### Random Forest
+Random forest is an ensemble learning method for classification, regression and other tasks that operate by constructing multiple decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees.
+
+#### AdaBoost Classifier
+Boosting is a class of ensemble machine learning algorithms that involve combining the predictions from many weak learners. A weak learner is a very simple model, although has some skill on the dataset. Boosting was a theoretical concept long before a practical algorithm could be developed, and the AdaBoost (adaptive boosting) algorithm was the first successful approach for the idea.
+The AdaBoost algorithm involves using very short (one-level) decision trees as weak learners that are added sequentially to the ensemble. Each subsequent model attempts to correct the predictions made by the model before it in the sequence. This is achieved by weighing the training dataset to put more focus on training examples on which prior models made prediction errors.
+
+## Conclusion
+Decision tree model performed the best out of all the models evaluated. The decision tree model had a training accuracy of 0.986 and a validation accuracy of 0.876, indicating that it is able to generalize well to unseen data.
+
+While logistic regression also performed well, with a validation accuracy of around 0.80, it did not perform as well as the decision tree model.
+
+It is important to note that hyperparameter tuning using random search and grid search did not lead to significant improvements in performance for any of the models.
+
+Overall, based on the evaluation of the models, it may be recommended to use the decision tree model for this project, as it provides a high level of accuracy and is able to generalize well. However, it is important to note that further analysis and evaluation may be necessary to determine the best model for this specific project.
+
 
