@@ -15,7 +15,7 @@ Predicting whether a customer would be interested in buying Vehicle Insurance so
     * [Data Wrangling](#data-wrangling)
     * [Data Visualization](#data-visualization)
     * [Feature Engineering and Data Pre processing](#feature-engineering-and-data-pre-processing)
-    * [Machine Learning Models](Machine-Learning-Models)
+    * [Machine Learning Models](#Machine-Learning-Models)
   * [Conclusion](#conclusion)
   
 
