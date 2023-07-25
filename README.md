@@ -113,12 +113,21 @@ Boosting is a class of ensemble machine learning algorithms that involve combini
 The AdaBoost algorithm involves using very short (one-level) decision trees as weak learners that are added sequentially to the ensemble. Each subsequent model attempts to correct the predictions made by the model before it in the sequence. This is achieved by weighing the training dataset to put more focus on training examples on which prior models made prediction errors.
 
 ## Conclusion
-Decision tree model performed the best out of all the models evaluated. The decision tree model had a training accuracy of 0.986 and a validation accuracy of 0.876, indicating that it is able to generalize well to unseen data.
+In this data science project aimed at predicting sales for Rossmann_Stores, we evaluated the performance of various machine learning models using several metrics, including R score, Adjusted R score, Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and Mean Absolute Error (MAE).
 
-While logistic regression also performed well, with a validation accuracy of around 0.80, it did not perform as well as the decision tree model.
+Based on our analysis, the results show that the XGBoost model (xgb_model) achieved the highest R score of 0.980071, indicating excellent predictive capability. The Adjusted R score, which considers the complexity of the model, is also very close to the R score, suggesting that the model's performance is reliable and not heavily influenced by overfitting.
 
-It is important to note that hyperparameter tuning using random search and grid search did not lead to significant improvements in performance for any of the models.
+The Decision Tree model (decision_tree) demonstrated strong performance as well, with an R score of 0.972925. While slightly below the XGBoost model, it remains a competitive option for predicting store sales.
 
-Overall, based on the evaluation of the models, it may be recommended to use the decision tree model for this project, as it provides a high level of accuracy and is able to generalize well. However, it is important to note that further analysis and evaluation may be necessary to determine the best model for this specific project.
+The Gradient Boosting model (gradient_boosting) follows with an R score of 0.932960. While it is less accurate than the top two models, it may still provide valuable predictions for store sales.
+
+The Ridge model (ridge), Linear Regression model (linear_regression), and Lasso model (lasso) show similar R scores of approximately 0.903, indicating moderate predictive ability for store sales.
+
+The AdaBoost model (AdaBoost) falls further behind, with an R score of 0.852333, suggesting limited accuracy in predicting sales for multiple stores.
+
+Lastly, the Elastic Net model (elastic_net) performed the least favorably among all models, with an R score of 0.319279. It is apparent that this model may not be well-suited for this specific prediction task and requires further investigation or potentially different modeling approaches.
+
+Overall, the XGBoost model stands out as the best performer, demonstrating the highest predictive accuracy for sales across multiple stores. However, it is crucial to consider other factors such as model interpretability, computational complexity, and data size when selecting the final model for deployment.
+
 
 
